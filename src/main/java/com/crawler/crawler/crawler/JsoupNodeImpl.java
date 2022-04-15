@@ -31,11 +31,13 @@ public class JsoupNodeImpl implements Node {
                 System.out.println("thread " + Thread.currentThread().getId()+";" + " download webpage: " + url);
                 return document;
             }
-            // TODO выбрасывать своё исключение не предавать null
-            // Обернуть все Свои исключения и пробросить дальше
-            throw new CrawlerRuntimeException(String.format("This page %s has other status 200", url));
+            throw new CrawlerRuntimeException(
+                    String.format("This page %s could not download, and has status %s ",
+                            url, connection.response().statusCode()));
         } catch (IOException e) {
-            throw new CrawlerRuntimeException(String.format("This %s page could not download", url));
+            throw new CrawlerRuntimeException(
+                    String.format("This %s page could not download", url),
+                    e.getCause());
         }
     }
 
