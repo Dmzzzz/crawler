@@ -10,35 +10,35 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CrawlerTest {
+class SimpleCrawlerTest {
 
     @Test
     void whenHave7NotUniqueUrls_then_4UniqueAdded() {
         //given
         Node node = Mockito.mock(Node.class);
-        Crawler crawler = new Crawler("example.com", node);
+        SimpleCrawler simpleCrawler = new SimpleCrawler("example.com", node);
         List<String> urls = Stream.of("1.com", "2.com", "3.com", "3.com", "3.com", "4.com", "4.com")
                 .collect(Collectors.toList());
 
         //when
         Mockito.when(node.urls("example.com")).thenReturn(urls);
-        crawler.startCrawling();
+        simpleCrawler.startCrawling();
 
         //then
-        Set<String> uniqueLinks = crawler.getUniqueLinks();
+        Set<String> uniqueLinks = simpleCrawler.getUniqueLinks();
         Assertions.assertEquals(4, uniqueLinks.size());
     }
 
     @Test
     void whenHave1HeadURL_and_No_nestedUrls() {
         Node node = Mockito.mock(Node.class);
-        Crawler crawler = new Crawler("example.com", node);
+        SimpleCrawler simpleCrawler = new SimpleCrawler("example.com", node);
         List<String> urls = Collections.emptyList();
 
         Mockito.when(node.urls("example.com")).thenReturn(urls);
-        crawler.startCrawling();
+        simpleCrawler.startCrawling();
 
-        Set<String> links = crawler.getUniqueLinks();
+        Set<String> links = simpleCrawler.getUniqueLinks();
         Assertions.assertEquals(0, links.size());
     }
 
@@ -47,7 +47,7 @@ class CrawlerTest {
         Node node = Mockito.mock(Node.class);
 
         assertThrows(NullPointerException.class, () -> {
-            new Crawler(null, node);
+            new SimpleCrawler(null, node);
         });
     }
 

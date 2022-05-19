@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
         Node node = new JsoupNodeImpl();
-        Crawler crawler = new Crawler("https://en.wikipedia.org", node);
+        SimpleCrawler simpleCrawler = new SimpleCrawler("https://en.wikipedia.org", node);
 
-        Thread thread = new Thread(crawler::startCrawling);
+        Thread thread = new Thread(simpleCrawler::startCrawling);
                 thread.start();
 
     }

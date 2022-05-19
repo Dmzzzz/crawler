@@ -11,4 +11,9 @@ public class PageController {
         return "example";
     }
 
+    @GetMapping("/1")
+    public String get1Page() {
+        return "1";
+    }
+
 }

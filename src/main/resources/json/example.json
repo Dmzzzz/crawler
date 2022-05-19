@@ -1,0 +1,44 @@
+{
+  title: 'Опреационная касса',
+  icon: <FireSvg />,
+  links: [
+    {
+      title: 'Контроль выдачи',
+      url: '/routecontrols',
+    },
+    {
+      title: 'Контроль приема',
+      url: '/routecontrols',
+    },
+    {
+      title: 'Операции с банком России',
+      url: '/routecontrols',
+    },
+  ],
+},
+{
+title: 'Продуктовый учет',
+icon: <FireSvg />,
+links: [
+{
+title: 'Бизнес-сервисы',
+url: '/fspa/business-services',
+},
+{
+title: 'Продуктовые события',
+url: '/fspa/product-events',
+},
+{
+title: 'Регистры',
+url: '/fspa/registers',
+},
+{
+title: 'Подрегистры',
+url: '/fspa/sub-registers',
+},
+{
+title: 'Документы',
+url: '/fspa/documents',
+},
+],
+}

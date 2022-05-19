@@ -1,0 +1,40 @@
+[
+  {
+    "id": 3,
+    "name": "Операционная касса",
+    "iconCode": "3",
+    "linkRestDTOList": [
+      {
+        "id": 6,
+        "name": "Контроль выдачи",
+        "typeOfLink": "Внешняя",
+        "url": null
+      },
+      {
+        "id": 7,
+        "name": "Контроль приема",
+        "typeOfLink": "Внешняя",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Операционная касса",
+    "iconCode": "3",
+    "linkRestDTOList": [
+      {
+        "id": 6,
+        "name": "Контроль выдачи",
+        "typeOfLink": "Внешняя",
+        "url": null
+      },
+      {
+        "id": 7,
+        "name": "Контроль приема",
+        "typeOfLink": "Внешняя",
+        "url": null
+      }
+    ]
+  }
+]

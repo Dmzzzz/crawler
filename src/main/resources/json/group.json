@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "name": "Бухгалетерские документы",
+    "iconCode": "1",
+    "linkRestDTOList": [
+      {
+        "id": 1,
+        "name": "Ценности",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      },
+      {
+        "id": 2,
+        "name": "Модели Документов",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      },
+      {
+        "id": 3,
+        "name": "ГКЦ",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Справочники",
+    "iconCode": "2",
+    "linkRestDTOList": [
+      {
+        "id": 1,
+        "name": "Ценности",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      },
+      {
+        "id": 2,
+        "name": "Модели Документов",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      },
+      {
+        "id": 3,
+        "name": "ГКЦ",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      },
+      {
+        "id": 5,
+        "name": "Инфракструктура КИЦ",
+        "typeOfLink": "Внешняя",
+        "url": null
+      },
+      {
+        "id": 4,
+        "name": "Места Хранения",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Операционная касса",
+    "iconCode": "3",
+    "linkRestDTOList": [
+      {
+        "id": 6,
+        "name": "Контроль выдачи",
+        "typeOfLink": "Внешняя",
+        "url": null
+      },
+      {
+        "id": 7,
+        "name": "Контроль приема",
+        "typeOfLink": "Внешняя",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Продуктовый учет",
+    "iconCode": "4",
+    "linkRestDTOList": [
+      {
+        "id": 3,
+        "name": "ГКЦ",
+        "typeOfLink": "Внутреняя",
+        "url": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "1",
+    "title": "Операционная касса",
+    "icon": "FireSVG",
+    "linkMenu": [
+      {
+        "id": "2",
+        "name": "Контроль выдачи",
+        "typeOfLink": "INTERNAL",
+        "url": "/routecontrols",
+        "permissions": [
+          "doc:payment:su:recall"
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Контроль приема",
+        "typeOfLink": "INTERNAL",
+        "url": "/routecontrols",
+        "permissions": [
+          "doc:payment:su:recall",
+          "sadd"
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Операции с банком России",
+        "typeOfLink": "INTERNAL",
+        "url": "/routecontrols",
+        "permissions": [
+          "doc:payment:su:recall",
+          "asdasd"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Продуктовый учет",
+    "icon": "FireSVG",
+    "linkMenu": [
+      {
+        "id": "6",
+        "name": "Бизнес-сервисы",
+        "typeOfLink": "INTERNAL",
+        "url": "/fspa/business-services",
+        "permissions": [
+          "doc:payment:su:recall",
+          "asd"
+        ]
+      },
+      {
+        "id": "7",
+        "name": "Продуктовые события",
+        "typeOfLink": "INTERNAL",
+        "url": "/fspa/product-events",
+        "permissions": [
+          "doc:payment:su:recall",
+          "asd"
+        ]
+      },
+      {
+        "id": "8",
+        "name": "Регистры",
+        "typeOfLink": "INTERNAL",
+        "url": "/fspa/registers",
+        "permissions": [
+          "doc:payment:su:recall",
+          "asd"
+        ]
+      },
+      {
+        "id": "9",
+        "name": "Подрегистры",
+        "typeOfLink": "INTERNAL",
+        "url": "/fspa/sub-registers",
+        "permissions": [
+          "doc:payment:su:recall",
+          "sad"
+        ]
+      },
+      {
+        "id": "10",
+        "name": "Документы",
+        "typeOfLink": "INTERNAL",
+        "url": "/fspa/documents",
+        "permissions": [
+          "doc:payment:su:super",
+          "dsd"
+        ]
+      }
+    ]
+  }
+]
