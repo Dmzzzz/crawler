@@ -1,3 +1,4 @@
+/*
 package com.crawler.crawler.examplecontroller;
 
 import com.crawler.crawler.examplecontroller.work.LinkType;
@@ -91,3 +92,4 @@ public class Helper {
         groupDTOList.add(groceryAccounting);
     }
 }
+*/

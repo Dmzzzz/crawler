@@ -1,25 +1,4 @@
-package com.crawler.crawler.examplecontroller.work2;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.stereotype.Component;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-@Component
-public class NavigatorParser {
-
-    private static final String NAVIGATION = "src/main/resources/json/groupandlinks.json";
-
-    /**
-     * как частов обновлять конфигурацию, сервер должен обновлять конфигурацию во время работы
+как частов обновлять конфигурацию, сервер должен обновлять конфигурацию во время работы
      * только при Старте - считывать при старте и кэшировать - лейзи объект считывать при старте и кэшировать
      * считываем в память
      *
@@ -222,29 +201,46 @@ public class NavigatorParser {
      *
      *
      */
-    List<GroupRestDTO> parseFromJson() {
-        // как прочитать файл из ресурсов
-        System.lineSeparator();
-        // для переноса путей
 
 
-        // передавать InputStream - Jackson'у
-        Path path = Paths.get(NAVIGATION);
-        String jsonString = "";
-        try {
-            jsonString = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<GroupRestDTO> navigatorRestGroupDTOList = new ArrayList<>();
-
-        try {
-            navigatorRestGroupDTOList.addAll(Arrays.asList(objectMapper.readValue(jsonString, GroupRestDTO[].class)));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return navigatorRestGroupDTOList;
-    }
+GroupA{
+  link1 - permisionP;
 }
+
+GroupB{
+  link2 - permissonP;
+}
+
+================================
+GroupA{
+  link1 - permissionP;
+  link2 - pemissionP;
+}
+
+
+
+1  одна группа у неё 1 линк в линке 1 пермишен
+
+2  одна группа - 2 линка с одинаковыми пермишенами
+
+3 одна группа - 2 линка с разными пермишенами
+
+4 2-группы в каждолй по 1-линке с одинаковыми пермишенами
+
+5 2-группы в кажджой по 1-линке с разными пермишенами
+
+6 4-группы в 1-ой 1 линка во 2ой -2 и пермишены
+
+
+Будем тестировать - построим индекс и будет кидать запросы,
+вот пермишен такой - сформируй меню
+        Индекс часть сервиса - на основе индекса - строится ДТО
+
+
+
+IndexGroup {
+
+}
+
+

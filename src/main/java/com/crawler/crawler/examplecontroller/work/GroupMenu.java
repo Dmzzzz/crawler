@@ -1,9 +1,7 @@
-package com.crawler.crawler.examplecontroller.work4;
+package com.crawler.crawler.examplecontroller.work;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
+import java.util.*;
 import java.io.Serializable;
-import java.util.List;
 
 public class GroupMenu implements Serializable {
 
@@ -15,6 +13,13 @@ public class GroupMenu implements Serializable {
     private List<LinkMenu> linkMenu;
 
     public GroupMenu() {
+    }
+
+    public GroupMenu(Integer id, String title, String icon, List<LinkMenu> linkMenu) {
+        this.id = id;
+        this.title = title;
+        this.icon = icon;
+        this.linkMenu = linkMenu;
     }
 
     public Integer getId() {
@@ -52,10 +57,23 @@ public class GroupMenu implements Serializable {
     @Override
     public String toString() {
         return "GroupMenu{" +
-               "id=" + id +
-               ", title='" + title + '\'' +
-               ", icon='" + icon + '\'' +
-               ", linkMenu=" + linkMenu +
-               '}';
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", icon='" + icon + '\'' +
+                ", linkMenu=" + linkMenu +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupMenu groupMenu = (GroupMenu) o;
+        return Objects.equals(id, groupMenu.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

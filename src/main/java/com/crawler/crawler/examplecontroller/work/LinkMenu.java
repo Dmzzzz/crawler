@@ -1,4 +1,4 @@
-package com.crawler.crawler.examplecontroller.work4;
+package com.crawler.crawler.examplecontroller.work;
 
 import java.util.Set;
 
@@ -12,6 +12,15 @@ public class LinkMenu {
     private Set<String> permissions;
 
     public LinkMenu() {
+    }
+
+
+    public LinkMenu(Integer id, String name, String typeOfLink, String url, Set<String> permissions) {
+        this.id = id;
+        this.name = name;
+        this.typeOfLink = typeOfLink;
+        this.url = url;
+        this.permissions = permissions;
     }
 
     public Integer getId() {
@@ -57,11 +66,11 @@ public class LinkMenu {
     @Override
     public String toString() {
         return "LinkMenu{" +
-               "id=" + id +
-               ", name='" + name + '\'' +
-               ", typeOfLink='" + typeOfLink + '\'' +
-               ", url='" + url + '\'' +
-               ", permissions=" + permissions +
-               '}';
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", typeOfLink='" + typeOfLink + '\'' +
+                ", url='" + url + '\'' +
+                ", permissions=" + permissions +
+                '}';
     }
 }

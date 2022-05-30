@@ -1,17 +1,16 @@
-package com.crawler.crawler.examplecontroller.work3;
+package com.crawler.crawler.examplecontroller.work.dto;
 
-import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
-public class LinkDTO implements Serializable {
+public class LinkMenuDTO {
 
     private String name;
     private String typeOfLink;
     private String url;
 
-    private List<String> permissions;
+    private Set<String> permissions;
 
-    public LinkDTO(String name, String typeOfLink, String url, List<String> permissions) {
+    public LinkMenuDTO(String name, String typeOfLink, String url, Set<String> permissions) {
         this.name = name;
         this.typeOfLink = typeOfLink;
         this.url = url;
@@ -22,37 +21,21 @@ public class LinkDTO implements Serializable {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getTypeOfLink() {
         return typeOfLink;
-    }
-
-    public void setTypeOfLink(String typeOfLink) {
-        this.typeOfLink = typeOfLink;
     }
 
     public String getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public List<String> getPermissions() {
+    public Set<String> getPermissions() {
         return permissions;
-    }
-
-    public void setPermissions(List<String> permissions) {
-        this.permissions = permissions;
     }
 
     @Override
     public String toString() {
-        return "LinkDTO{" +
+        return "LinkMenuDTO{" +
                 "name='" + name + '\'' +
                 ", typeOfLink='" + typeOfLink + '\'' +
                 ", url='" + url + '\'' +

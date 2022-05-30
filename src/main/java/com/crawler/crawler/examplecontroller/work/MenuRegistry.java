@@ -1,5 +1,7 @@
-package com.crawler.crawler.examplecontroller.work4;
+package com.crawler.crawler.examplecontroller.work;
 
 public interface MenuRegistry {
+
     MenuConfiguration createMenuConfiguration();
+
 }
